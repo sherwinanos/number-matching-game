@@ -22,8 +22,9 @@ export default function Home() {
       <div className="container">
         <div className="flex flex-col w-full lg:w-8/12 mx-auto gap-8">
           {/* Left Content */}
-          <div className="w-full lg:fixed pt-16">
+          <div className="w-full lg:w-[500px] lg:fixed">
             <h1 className="text-4xl lg:text-5xl text-center lg:text-left font-bold mb-8">Dynamic Number <br/>Matching Game</h1>
+            
             <div className="flex flex-col items-center lg:items-start gap-4 mb-6">
               <Input
                 type="number"
@@ -31,6 +32,24 @@ export default function Home() {
                 onChange={(e:any) => setMaxNumber(parseInt(e.target.value))}
               />
               <Button onClick={startGame} className="btn-primary">Start Game</Button>
+            </div>
+
+            <div className="mb-8 max-w-lg">
+              <h2 className="text-sm font-semibold mb-2">Instructions</h2>
+              <ul className="list-disc pl-5 text-left space-y-2 text-xs">
+                <li>
+                  Enter a maximum number to generate pairs of cards. For example, if you enter "5," there will be pairs of numbers from 1 to 5.
+                </li>
+                <li>Click "Start Game" to shuffle and display the cards.</li>
+                <li>
+                  Click on any two cards to reveal them. If the numbers match, they will stay face-up; otherwise, they will flip back.
+                </li>
+                <li>Continue matching pairs until all cards are face-up.</li>
+                <li>Your score is measured in turns—fewer turns mean a better score!</li>
+                <li>
+                  Click "Reset" to restart the game at any time.
+                </li>
+              </ul>
             </div>
           </div>
 

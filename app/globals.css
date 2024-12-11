@@ -37,6 +37,23 @@ body {
   @apply transition-all duration-300 ease-in-out
 }
 
+.btn-secondary {
+  color: var(--primary);
+  background: transparent;
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+  font-size: 1rem;
+  width: 16rem;
+  @apply transition-all duration-300 ease-in-out
+}
+
+.btn-secondary:hover {
+  color: var(--secondary);
+  background: transparent;
+  border: 1px solid var(--primary-dark) !important;
+  @apply transition-all duration-300 ease-in-out
+}
+
 input[type="number"] {
   border-radius: 1rem;
   font-size: 1rem;
@@ -51,12 +68,19 @@ input[type="number"] {
 .card-down {
   background: var(--primary);
   color: var(--tertiary);
-  @apply transition-all duration-300 ease-in-out
+  /* @apply transition-all duration-300 ease-in-out */
 }
 
-.card-down:hover {
+/* .card-down:hover {
   background: var(--primary-dark);
   color: var(--secondary);
   @apply transition-all duration-300 ease-in-out
+} */
+
+.game-dialog {
+  background: #111111;
+  border-color: var(--primary);
 }
+
+.dialog-turns { color: var(--primary);}
 
